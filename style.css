@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+  color: #fff;
+}
+body {
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 64, 50, 0.8),
+      rgba(71, 17, 116, 0.9)
+    ),
+    url("images/background.jpg") no-repeat center/cover;
+  width: 100vw;
+  color: white;
+}
+header {
+  height:15vh;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding: 2rem;
+ }
+.logo {
+  height: 2rem;
+}
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.social-media i {
+  margin-right: 0.28rem;
+}
+.content {
+  height: calc(100% - 15vh);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 0 11rem;
+  
+  /* padding: 0 10rem; */
+  /* overflow: hidden;isko */
+}
+.content form {
+  flex:1;
+  /* align-items: space-between; */
+}
+
+input {
+  background-color: rgba(112, 128, 144, 0.322);
+  border: none;
+  padding: 10px;
+  width:40vw; 
+  margin-bottom: 0.58rem;
+  border-radius: 0.3rem;
+  outline: 0;
+  color: white;
+}
+textarea {
+  resize: none;
+  height: 5rem;
+  width:40vw;
+  background-color: rgba(112, 128, 144, 0.322);
+  margin-bottom: 0.58rem;
+  border-radius: 5px;
+  outline: 0;
+  color: white;
+}
+aside {
+  width: 40vw;
+  padding-left: 2rem;
+}
+.btn {
+  background-color: coral;
+  padding: 0.45rem;
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 12px;
+  color: white;
+  font-weight: 500;
+  border: none;
+}
+.text h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.58rem;
+} 
+label{
+  margin-bottom: 0.58rem;
+}
+/* Media Queries */
+@media (max-width: 650px) {
+  header,
+  .social-media {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .logo {
+    height: 1.4rem;
+  }
+  .content {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    margin:auto;
+    /* align-items: space-evenly;isko */
+    padding: 1rem 0.5rem;
+  }
+  form{
+    width:100%;
+    margin: 0 auto;
+  }
+  .text{
+    height:40%;
+    width:100%;
+    /* padding:2rem 2rem; ///isko */
+  }
+  .text h1{
+    text-align: center;
+   
+  }
+  .content p{
+    display: none;
+    font-size:0.9rem;
+}
+form {
+  padding-left: 0.6rem; 
+
+  /* background-color: yellow; */
+ }
+.content label  {
+  margin-bottom: 0.5rem;
+}
+.content input {
+  margin-bottom: 1rem;
+  background-color: rgba(112, 128, 144, 0.322);
+  height: 2.3rem;
+  width: 80vw;
+  border: none;
+  border-radius: 0.3rem;
+}
+.content textarea {
+  width: 80vw;
+  margin-bottom: 1rem;
+  background-color: rgba(112, 128, 144, 0.322);
+  height: 4rem;
+  resize: none;
+  border: none;
+  border-radius: 0.3rem;
+}
+}
+@media (max-height:500px) {
+    .logo{
+        height:1.2rem;
+    }
+    .content{
+        margin:0 auto;
+    }
+    .content h1{
+        font-size: 3rem;
+    }
+    .content{
+        margin-top: 2rem;
+    }
+    .text{
+        height:100%;
+        width:100%;
+    }
+    .text h1{
+        line-height: 1;
+        font-size:2rem;
+        font-weight:700;
+    }
+    .text p{
+        text-align: justify;
+    }
+    
+} 
+/* @media (orientation: landscape) and (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    gap: 0.3rem;
+    padding: 0.5rem 2rem;
+    height: 10vh;
+  }
+  .logo{
+    height: 2rem;
+  }
+  .social-media {
+    flex-direction: row;
+  }
+  .social-media span {
+    font-size: 0.8rem;
+  }
+  .content {
+    height: calc(100% - 15vh);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  aside p {
+    display: none;
+  }
+  aside {
+    width: 80vw;
+    padding-left: 1rem; 
+    background-color: red;
+  }
+  aside h1 {
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 2.3rem;
+    width: 100%;
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+  }
+  form {
+    padding-left: 0.35rem; 
+
+    background-color: yellow;
+   }
+  form label {
+    margin-bottom: 0.5rem;
+  }
+   input {
+    margin-bottom: 1rem;
+    background-color: rgba(112, 128, 144, 0.322);
+    height: 1.8rem;
+    width: 80vw;
+    border: none;
+    border-radius: 0.3rem;
+  }
+   textarea {
+    width: 80vw;
+    margin-bottom: 1rem;
+    background-color: rgba(112, 128, 144, 0.322);
+    height: 2.5rem;
+    resize: none;
+    border: none;
+    border-radius: 0.3rem;
+  }
+} */
